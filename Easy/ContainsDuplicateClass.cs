@@ -1,6 +1,8 @@
-public class Solution
+namespace LeetCodeProblems.Easy;
+
+static public class ContainsDuplicateClass
 {
-    public bool ContainsDuplicate(int[] nums)
+    static public bool ContainsDuplicate(int[] nums)
     {
         Array.Sort(nums);
         for (int i = 0; i < nums.Length - 1; i++)
