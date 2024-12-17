@@ -4,7 +4,18 @@ static public class TopKFrequentClass
 {
     static public int[] TopKFrequent(int[] nums, int k)
     {
+        Array.Sort(nums);
+        Dictionary<int, int> dict = new Dictionary<int, int>(nums.Length);
+        foreach (var item in nums)
+        {
+            if (!dict.TryAdd(item, 1))
+            {
+                dict[item]++;
+            }
+        }
 
-        return [];
+        var arrres = dict.Select()
+
+        return toTake..ToArray();
     }
 }
