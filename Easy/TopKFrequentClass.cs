@@ -13,9 +13,7 @@ static public class TopKFrequentClass
                 dict[item]++;
             }
         }
-
-        var arrres = dict.Select()
-
-        return toTake..ToArray();
+        var arrres = dict.ToList().OrderByDescending(e => e.Value);
+        return arrres.Select(e => e.Key).Take(k).ToArray();
     }
 }
